@@ -46,7 +46,7 @@ class Deck
 		}
 		shuffle();
 	}
-public void shuffle(){
+/*public void shuffle(){
 	for(int k=0; k<1000; k++){
 		int rnd1 = (int) (Math.random()* 52);
 		int rnd2 = (int) (Math.random()* 52);
@@ -54,20 +54,15 @@ public void shuffle(){
 		cards.set(rnd1,cards.get(rnd2));
 		cards.set(rnd2, temp);
 	}
-}
-/*public void shuffle(){
+}*/
+public void shuffle(){
 	for(int k=0;k<size;k++){
-		int rnd1 = (int) (Math.random()* 52);
-		int rnd2 = (int) (Math.random()* 52);
-		cards.match(cards.get(rnd1));
-
-
-
+		int rand = (int) (Math.random()* 52);
 		Card temp = cards.get(k);
 		cards.set(k,cards.get(rand));
-		cards.set(rand, cards.get(k));
+		cards.set(rand, temp);
 	}
-}*/
+}
 
 //to string method
 	public String toString(){
